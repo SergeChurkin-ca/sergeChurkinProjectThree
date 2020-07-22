@@ -1,4 +1,4 @@
-### In what country you were supposed to be born
+### In which country you were supposed to be born
 
 
 #### Type of project quiz
@@ -24,7 +24,13 @@ Final result will dispaly the name of country and random picture from unsplash.c
     Background picture from unsplash.com/country illustrates the result
 
 ## Stretch Goals
-    1. Extand countries database to provide more choices with more details and features
+    1. Extend countries database to provide more choices with more details and features
+
+    2. Reset button - in case your chnaged the mind
+    
+
+
+
     
 
 

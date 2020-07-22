@@ -1,0 +1,37 @@
+// Into screen with button which directs to quiz page
+
+// This is an exmaple of countries database with features
+const result = {};
+
+
+// building database
+const countries = {
+
+    Norway = {
+        season: 'winter',
+        landscape: ['mountains', 'seaside'],
+        weather: 'snow',
+        food: 'seafod',
+        music: 'scandinavian folk',
+        wayofLife: ['secluded', 'journeys and outdoors'],
+        dreamHouse: ['forest cabin', 'log house'],
+        annoyingPeople: ['talkative', 'bragging', 'lazy'],
+        bestWeekEnd: ['fishing', 'outdoors', 'family gathering'],
+        movieRole: ['historical', 'cop', 'ordinary people'],
+        loveIs: ['trust', 'strong family']
+    }
+
+}
+
+
+// If statements ckecks if the sellected answer coincide with feature objects element of country
+// After input another question is rendered on page
+
+// submit button confirms the choice and starts next question
+
+
+// Math.random finalize the result to exclude the coincidence of countries with similar features
+
+
+
+// Backgdound image of container provides picture from unsplash.com or pixabay.com and illustrates the choice and some informaiton about the country
