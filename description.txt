@@ -25,12 +25,15 @@ Final result will dispaly the name of country and random picture from unsplash.c
 
 ## Stretch Goals
     1. Extend countries database to provide more choices with more details and features
+<<<<<<< HEAD
 
     2. Reset button - in case your chnaged the mind
     
 
 
 
+=======
+>>>>>>> 6dc077559e656cd40a1a334ff1e40ab39cc9e8e9
     
 
 
