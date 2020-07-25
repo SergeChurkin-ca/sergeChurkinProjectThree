@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Which country best fits your personality?</title>
+    <title>Which country fits your personality best?</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
@@ -11,23 +11,45 @@
 <body>
 
 
-    <div class="question" id="quiz"></div>
-    <ul>
-        <input type="checkbox" name="season" id="winter" value="Winter"><label for="winter">Winter</label>
-        <input type="checkbox" name="season" id="spring" value="spring"><label for="spring">Spring</label>
-        <input type="checkbox" name="season" id="summer" value="summer"><label for="summer">Summer</label>
-
+    <div class="questions" id="quiz"></div>
+    <!-- <ul class="season"> -->
+    <h2>What is your favourite season?</h2>
+    <input type="checkbox" name="season" id="winter" value="winter"><label for="winter">Winter</label>
+    <input type="checkbox" name="season" id="spring" value="spring"><label for="spring">Spring</label>
+    <input type="checkbox" name="season" id="summer" value="summer"><label for="summer">Summer</label>
+    <input type="checkbox" name="season" id="fall" value="fall"><label for="fall">Fall</label>
     </ul>
 
-    <button id=" submit ">Submit</button>
+    <ul class="weather">
+        <h2>What is your favourite weather?</h2>
 
-    <div id="results "></div>
+        <input type="checkbox" name="weather" id="sunny" value="sunny"><label for="sunny">Sunny</label>
+        <input type="checkbox" name="weather" id="snowy" value="snowy"><label for="snowy">Snowy</label>
+        <input type="checkbox" name="weather" id="rainy" value="rainy"><label for="rainy">Rainy</label>
+        <input type="checkbox" name="weather" id="cloudy" value="cloudy"><label for="cloudy">Cloudy</label>
+        <input type="checkbox" name="weather" id="windy" value="windy"><label for="windy">Windy</label>
+        <input type="checkbox" name="weather" id="foggy" value="foggy"><label for="foggy">Foggy</label>
+        <input type="checkbox" name="weather" id="thunderstorms" value="thunderstorms"><label for="thunderstorms">Thunderstorms</label>
+
+        <h2>What is your favourite food?</h2>
+        <input type="checkbox" name="food" id="seafood" value="seafood"><label for="seafood">Seafood</label>
+        <input type="checkbox" name="food" id="thai" value="thai"><label for="thai">Thai</label>
 
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
-    <script src="script.js "></script>
+
+
+
+        <button id=" submit ">Submit</button>
+
+        <div id="results "></div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+        <script src="script.js "></script>
 </body>
 
 
