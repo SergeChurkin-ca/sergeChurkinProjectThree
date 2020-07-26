@@ -351,24 +351,13 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-}
-
-.img-container {
-  margin: 0 auto;
-  overflow: hidden;
-  width: 50%;
+  margin-bottom: 2em;
+  background-color: #f3f3ea;
 }
 
 ul {
-  background-color: #f3f3ea;
   padding: 0.5em;
   width: calc((100% / 2));
-}
-
-img {
-  width: 100%;
-  height: auto;
-  padding: 1em 0 0 1em;
 }
 
 li {
@@ -389,4 +378,22 @@ input[type='checkbox'] {
   height: 25px;
   width: 25px;
   background-color: #eee;
+}
+
+.img-container {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  padding: 2em 2em;
+}
+
+.button-next button {
+  background-color: #640D36;
+  margin-left: 0.6em;
+  color: white;
 }

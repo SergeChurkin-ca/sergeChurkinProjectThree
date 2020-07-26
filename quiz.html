@@ -22,18 +22,18 @@
                     <li><input type="checkbox" name="season" id="spring" value="spring"><label for="spring">Spring</label></li>
                     <li><input type="checkbox" name="season" id="summer" value="summer"><label for="summer">Summer</label></li>
                     <li><input type="checkbox" name="season" id="fall" value="fall"><label for="fall">Fall</label></li>
+                    <a href="#weather" class="button-next"><button type="submit">Next</button></a>
                 </ul>
+
                 <div class="img-container">
-
                     <img src="https://source.unsplash.com/450x450/?seasons" alt="">
-
                 </div>
             </div>
 
-            <h2>What are the best types of weather?</h2>
+
+            <h2 id="weather">What are the best types of weather?</h2>
             <div class="wrapper question-wrapper">
                 <ul class="weather">
-
 
                     <li><input type="checkbox" name="weather" id="sunny" value="sunny"><label for="sunny">Sunny</label></li>
                     <li><input type="checkbox" name="weather" id="hot" value="hot"><label for="hot">Hot</label></li>
@@ -43,16 +43,19 @@
                     <li><input type="checkbox" name="weather" id="cloudy" value="cloudy"><label for="cloudy">Cloudy</label></li>
                     <li><input type="checkbox" name="weather" id="windy" value="windy"><label for="windy">Windy</label></li>
                     <li><input type="checkbox" name="weather" id="foggy" value="foggy"><label for="foggy">Foggy</label></li>
-                    <li><input type="checkbox" name="weather" id="thunderstorms" value="thunderstorms"><label for="thunderstorms">Thunderstorms</label></li>
+                    <li><input type="checkbox" name="weather" id="thunder" value="thunder"><label for="thunder">Thunder</label></li>
+                    <a href="#food" class="button-next"><button type="submit">Next</button></a>
                 </ul>
+
                 <div class="img-container">
                     <img src="https://source.unsplash.com/450x450/?weather" alt="">
 
                 </div>
+
             </div>
 
 
-            <h2>What kind of food do you like?</h2>
+            <h2 id="food">What kind of food do you like?</h2>
             <div class="wrapper question-wrapper">
                 <ul class="food">
 
@@ -62,6 +65,7 @@
                     <li><input type="checkbox" name="food" id="meats" value="meats"><label for="meats">Meats</label></li>
                     <li><input type="checkbox" name="food" id="oysters" value="oysters"><label for="oysters">Oysters</label></li>
                     <li><input type="checkbox" name="food" id="oatmeal" value="oatmeal"><label for="oatmeal">Oatmeal</label></li>
+                    <a href="#spicy" class="button-next"><button type="submit">Next</button></a>
                 </ul>
                 <div class="img-container">
                     <img src="https://source.unsplash.com/450x450/?food,dish" alt="">
@@ -69,7 +73,7 @@
                 </div>
             </div>
 
-            <h2>What level of spicy do you like?</h2>
+            <h2 id="spicy">What level of spicy do you like?</h2>
             <div class="wrapper question-wrapper">
                 <ul class="spicy">
 
@@ -78,14 +82,14 @@
                     <li><input type="checkbox" name="spicy" id="mild" value="mild"><label for="mild">Mild</label></li>
                     <li><input type="checkbox" name="spicy" id="spicy" value="spicy"><label for="spicy">Spicy</label></li>
                     <li><input type="checkbox" name="spicy" id="suicide" value="suicide"><label for="suicide">Suicide</label></li>
-
+                    <a href="#landscape" class="button-next"><button type="submit">Next</button></a>
                 </ul>
                 <div class="img-container">
                     <img src="https://source.unsplash.com/450x450/?spicy,seasoning" alt="">
 
                 </div>
             </div>
-            <h2>Chose the landscapes you like.</h2>
+            <h2 id="landscape">Chose the landscapes you like.</h2>
             <div class="wrapper question-wrapper">
                 <ul class="landscape">
 
@@ -97,13 +101,14 @@
                     <li><input type="checkbox" name="landscape" id="tundra" value="tundra"><label for="tundra">Tundra</label></li>
                     <li><input type="checkbox" name="landscape" id="lakeside" value="lakeside"><label for="lakeside">Lakeside</label></li>
                     <li><input type="checkbox" name="landscape" id="cityscape" value="cityscape"><label for="cityscape">Cityscape</label></li>
+                    <a href="#wayOfLife" class="button-next"><button type="submit">Next</button></a>
                 </ul>
                 <div class="img-container">
                     <img src="https://source.unsplash.com/450x450/?nature,landscape" alt="">
 
                 </div>
             </div>
-            <h2>What are the most enjoyable ways of life?</h2>
+            <h2 id="wayOfLife">What are the most enjoyable ways of life?</h2>
             <div class="wrapper question-wrapper">
                 <ul class="way-of-life">
 
@@ -114,13 +119,14 @@
                     <li><input type="checkbox" name="wayOfLife" id="journeys" value="journeys"><label for="journeys">Journeys and outdoors</label></li>
                     <li><input type="checkbox" name="wayOfLife" id="island" value="island"><label for="island">Island style</label></li>
                     <li><input type="checkbox" name="wayOfLife" id="hardworking" value="hardworking"><label for="hardworking">Hardworking</label></li>
+                    <a href="#dreamhouse" class="button-next"><button type="submit">Next</button></a>
                 </ul>
                 <div class="img-container">
                     <img src="https://source.unsplash.com/450x450/?lifestyle" alt="">
 
                 </div>
             </div>
-            <h2>What type of house makes you comfortable</h2>
+            <h2 id="dreamhouse">What type of house makes you comfortable</h2>
             <div class="wrapper question-wrapper">
                 <ul class="dreamhouse">
 
@@ -145,16 +151,17 @@
 
 
             <button id="submit">Submit</button>
-            <button id="reset">Reset</button>
+            <a href="#" id="rese" t><button type="submit">Reset</button></a>
+
         </div>
 
 
-        <div class="result" id="result"></div>
+        <div class="result " id="result "></div>
     </div>
 
 
 
-
+    <!-- Script and jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
     <script src="script.js "></script>
 </body>

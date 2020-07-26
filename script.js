@@ -30,7 +30,7 @@ app.countries = {
     Thailand: {
         score: 0,
         season: ['summer'],
-        weather: ['sunny', 'hot', 'thunderstorms', 'rainy', 'hot'],
+        weather: ['sunny', 'hot', 'thunder', 'rainy', 'hot'],
         food: ['thai', 'seafood'],
         spicy: ['suicide'],
         landscape: ['mountains', 'seaside', 'jungle'],
@@ -50,7 +50,7 @@ app.countries = {
     Panama: {
         score: 0,
         season: ['summer'],
-        weather: ['sunny', 'hot', 'thunderstorms', 'rainy'],
+        weather: ['sunny', 'hot', 'thunder', 'rainy'],
         food: ['seafood'],
         spicy: ['spicy'],
         landscape: ['seaside'],
