@@ -285,6 +285,10 @@ label {
   font-family: 'Libre Baskerville', serif;
 }
 
+button {
+  font-size: 25px;
+}
+
 label {
   font-size: 20px;
 }
@@ -313,20 +317,76 @@ label {
   display: inline-block;
   color: white;
   text-shadow: #12121b 2px 3px;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
 }
 
 button {
   color: black;
-  height: 2em;
+  height: 2.5em;
   border: 0;
+  padding: 0 2em;
+  border-radius: 0.2em;
 }
 
 h1 {
   font-size: 5rem;
+}
+
+.content-wrapper {
+  width: 70%;
+  text-align: left;
+}
+
+h2 {
+  background-color: #640D36;
+  color: white;
+  width: 100%;
+  padding: 1em;
+}
+
+.question-wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.img-container {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 50%;
+}
+
+ul {
+  background-color: #f3f3ea;
+  padding: 0.5em;
+  width: calc((100% / 2));
+}
+
+img {
+  width: 100%;
+  height: auto;
+  padding: 1em 0 0 1em;
+}
+
+li {
+  list-style: none;
+  background-color: #2ea4d6;
+  margin: 0 1em;
+  margin: 1em;
+  padding: 1em;
+}
+
+label {
+  padding: 0 1em;
+}
+
+input[type='checkbox'] {
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
 }

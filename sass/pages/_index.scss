@@ -23,14 +23,14 @@
     display: inline-block;
     color: white;
     text-shadow: rgb(18, 18, 27) 2px 3px;
-    transform: rotate(10deg);
-    transition: transform 0.8s;
 }
 
 button {
     color: black;
-    height: 2em;
+    height: 2.5em;
     border: 0;
+    padding: 0 2em;
+    border-radius: 0.2em;
 }
 
 h1 {
