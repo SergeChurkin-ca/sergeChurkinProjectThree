@@ -9,61 +9,92 @@ const app = {};
 app.countries = {
 
     Norway: {
-        // score: 0,
+        score: 0,
         season: ['winter'],
         weather: ['stormy', 'snowy'],
-        food: ['seafood'],
-        weather: ['stormy', 'snowy'],
-        music: ['rock', 'metal', 'electronic', 'techno'],
-        wayofLife: ['secluded', 'journeys and outdoors'],
-        dreamHouse: ['forest cabin', 'log house'],
-        annoyingPeople: ['talkative', 'bragging', 'lazy'],
-        bestWeekEnd: ['fishing', 'outdoors', 'family gathering'],
-        movieRole: ['historical', 'cop', 'ordinary people'],
-        loveIs: ['trust', 'strong family']
+        food: ['seafood', 'meats'],
+        spicy: ['none'],
+        landscape: ['seaside', 'mountains', 'lakeside'],
+        wayOfLife: ['secluded', 'adventurous'],
+        dreamhouse: ['woodloghouse'],
     },
     Germany: {
-        // score: 0,
-        season: ['Winter', 'fall'],
-        weather: ['stormy', 'snowy'],
-        food: []
+        score: 0,
+        season: ['winter', 'fall', 'spring'],
+        weather: ['snowy', 'mild'],
+        food: ['sausages', 'meats'],
+        spicy: ['mild'],
+        landscape: ['forest', 'lakeside', 'cityscape'],
+        wayOfLife: ['citylife', 'rural', 'journeys', 'hardworking'],
+        dreamhouse: ['cityappartment', 'farmhouse'],
     },
     Thailand: {
-        // score: 0,
+        score: 0,
         season: ['summer'],
-        weather: ['sunny', 'hot', 'thunderstorms', 'rainy'],
-        food: ['thai'],
-        landscape: ['mountains', 'seaside'],
-        food: ['seafood', 'thai'],
-        music: ['techno', 'k-pop'],
-        annoyingPeople: ['bragging'],
-
+        weather: ['sunny', 'hot', 'thunderstorms', 'rainy', 'hot'],
+        food: ['thai', 'seafood'],
+        spicy: ['suicide'],
+        landscape: ['mountains', 'seaside', 'jungle'],
+        wayOfLife: ['rural', 'island'],
+        dreamhouse: ['oceanvilla', 'junglehut'],
     },
     France: {
-        // score: 0,
+        score: 0,
         season: ['spring'],
-        weather: ['sunny'],
-        food: []
+        weather: ['sunny', 'mild'],
+        food: ['oysters', 'meats'],
+        spicy: ['none'],
+        landscape: ['mountains', 'seaside'],
+        wayOfLife: ['citylife'],
+        dreamhouse: ['townhouse', 'cityappartment'],
     },
     Panama: {
-        // score: 0,
+        score: 0,
         season: ['summer'],
         weather: ['sunny', 'hot', 'thunderstorms', 'rainy'],
-        food: []
+        food: ['seafood'],
+        spicy: ['spicy'],
+        landscape: ['seaside'],
+        wayOfLife: ['journey', 'adventurous'],
+        dreamhouse: ['condominium'],
+
     },
     Canada: {
-        // score: 0,
+        score: 0,
         season: ['winter', 'fall'],
         weather: ['stormy', 'snow-storms', 'snowy'],
-        food: []
-
+        food: ['sausages', 'meats'],
+        spicy: ['none'],
+        landscape: ['forest', 'tundra', 'lakeside'],
+        wayOfLife: ['rural', 'journeys', 'secluded'],
+        dreamhouse: ['townhouse', 'farmhouse'],
+    },
+    England: {
+        score: 0,
+        season: ['fall', 'spring'],
+        weather: ['stormy', 'rainy', 'foggy', 'cloudy', 'windy'],
+        food: ['oatmeal'],
+        spicy: ['none'],
+        landscape: ['forest', 'cityscape'],
+        wayOfLife: ['citylife'],
+        dreamhouse: ['townhouse', 'estate', 'cityappartment'],
+    },
+    Tunisia: {
+        score: 0,
+        season: ['summer'],
+        weather: ['hot', 'windy', 'sunny'],
+        food: ['seafood'],
+        spicy: ['spicy'],
+        landscape: ['desert'],
+        wayOfLife: [],
+        dreamhouse: ['oceanvilla'],
     }
-
 }
 
 
 
 $('button').on('click', function(e) {
+
     e.preventDefault();
     const choice = [];
 
@@ -100,22 +131,34 @@ const serchForAnswer = function(arr) {
         for (let countryName in app.countries) {
             // console.log(app.countries[countryName][arr[i].category]);
             // console.log("looking for category" + arr[i])
-            if (app.countries[countryName][arr[i].category].includes(arr[i].selection))
-
-
-            {
+            if (app.countries[countryName][arr[i].category].includes(arr[i].selection)) {
                 // console.log(countryName)
-                $('body').append(countryName)
+                // $('body').append(countryName);
+                app.countries[countryName].score++;
+
+                console.log(`${countryName}: ${app.countries[countryName].score}`);
+                $('.result').text(`${countryName} fits your personality best!`);
+
+
+
+                // console.log("Maximum score is " + Math.max(app.countries[countryName].score));
+
+                // $('.result').text(`${countryName} ${ Math.max(app.countries[countryName].score)}`);
+                // $('.result').text(`${ Math.max(app.countries[countryName].score)}`);
+                // $('.result').text(`${Math.max(app.countries[countryName].score)}`);
             }
 
-
         }
-
     }
 }
 
 
-// }
+// clear input fields and refresh the page
+$('#reset').on('click', function(e) {
+        $("input:checked").prop("checked", false);
+        location.reload();
+    })
+    // }
 
 // $(function() {
 //     app.init();
