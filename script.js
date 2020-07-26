@@ -92,7 +92,7 @@ app.countries = {
 
 
 // event listner and obtaining values from user choices
-$('button').on('click', function(e) {
+$('#submit').on('click', function(e) {
 
     e.preventDefault();
     const choice = [];

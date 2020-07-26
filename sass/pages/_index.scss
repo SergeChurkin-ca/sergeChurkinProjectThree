@@ -1,27 +1,38 @@
 .wrapper {
-    max-width: 1400px;
+    // max-width: 1400px;
     margin: 0 auto;
     width: 99%;
 }
 
 .welcome-container {
     text-align: center;
-    padding: 50% 0;
     background: url('/assets/erik-mclean-f7wX87Zs4fU-unsplash.jpg');
-    height: 100px;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
 }
 
 .text-container {
-    position: fixed;
-    top: 50%;
-    text-align: center;
+    justify-content: center;
+    // top: 50%;
+    // margin: auto;
+    margin-top: 20%;
+    width: 80%;
+    padding: 2em;
+    display: inline-block;
+    color: white;
+    text-shadow: rgb(18, 18, 27) 2px 3px;
+    transform: rotate(10deg);
+    transition: transform 0.8s;
 }
 
 button {
     color: black;
     height: 2em;
+    border: 0;
+}
+
+h1 {
+    font-size: 5rem;
 }
