@@ -19,7 +19,7 @@
     justify-content: center;
     // top: 50%;
     // margin: auto;
-    margin-top: 20%;
+    margin-top: 1%;
     width: 90%;
     padding: 2em;
     display: inline-block;
@@ -32,14 +32,11 @@
 
 button {
     color: black;
-    height: 2.5em;
+    height: auto;
     border: 0;
-    padding: 0 2em;
+    padding: 2em 2em;
     border-radius: 0.2em;
-}
-
-h1 {
-    font-size: 5rem;
+    border: solid 0.2em;
 }
 
 .img-stamps {

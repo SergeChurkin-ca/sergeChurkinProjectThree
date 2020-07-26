@@ -276,7 +276,7 @@ body {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: calc(20px + (86 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h2,
@@ -286,7 +286,7 @@ label {
 }
 
 button {
-  font-size: 25px;
+  font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
 }
 
 label {
@@ -313,7 +313,7 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20%;
+  margin-top: 1%;
   width: 90%;
   padding: 2em;
   display: inline-block;
@@ -326,14 +326,11 @@ label {
 
 button {
   color: black;
-  height: 2.5em;
+  height: auto;
   border: 0;
-  padding: 0 2em;
+  padding: 2em 2em;
   border-radius: 0.2em;
-}
-
-h1 {
-  font-size: 5rem;
+  border: solid 0.2em;
 }
 
 .img-stamps {
@@ -389,6 +386,7 @@ li {
   margin: 1em;
   padding: 1em;
   line-height: 2em;
+  border: solid 0.2em #2ea4d6;
 }
 
 label {
@@ -400,7 +398,6 @@ input[type='checkbox'] {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
 }
 
 .img-container {
@@ -421,14 +418,23 @@ img {
 button {
   background-color: lightgray;
   width: calc((100% / 2) - 1em);
-  padding: 0 1em;
+  padding: 1em 1em;
   margin: 1em 1em;
 }
 
-.button-next button {
+button {
   background-color: #640D36;
-  margin-left: 0.6em;
   color: white;
+}
+
+.button-next button {
+  margin-left: 0.6em;
+}
+
+.form-button {
+  background-color: #dbe2e9;
+  color: #252525;
+  border: solid 0.2em #dbe2e9;
 }
 
 .answer-wrapper {
@@ -437,7 +443,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin: 2em auto;
+  margin: 1em auto 1em;
 }
 
 .answer-img-container {
@@ -446,6 +452,10 @@ button {
   display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.answer-wrapper button {
+  margin-top: 0;
 }
 
 .answer-img-container img {
@@ -464,4 +474,18 @@ button {
     width: 100%;
     margin: 0.4em auto;
   }
+}
+
+button:hover,
+button:focus,
+li:hover,
+li:focus {
+  -webkit-box-shadow: 0.2em 0.2em 0.2em grey;
+          box-shadow: 0.2em 0.2em 0.2em grey;
+}
+
+li:hover,
+li:focus {
+  background-color: #137596;
+  border: outset 0.2em #137596;
 }

@@ -5,7 +5,8 @@ body {
 }
 
 h1 {
-    font-size: 26px
+    // font-size: 26px;
+    font-size: calc(20px + (86 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h2,
@@ -15,7 +16,8 @@ label {
 }
 
 button {
-    font-size: 25px;
+    // font-size: 25px;
+    font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
 }
 
 label {
