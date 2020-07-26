@@ -84,8 +84,8 @@ app.countries = {
         weather: ['hot', 'windy', 'sunny'],
         food: ['seafood'],
         spicy: ['spicy'],
-        landscape: ['desert'],
-        wayOfLife: [],
+        landscape: ['desert', 'seaside'],
+        wayOfLife: ['adventurous', 'journeys'],
         dreamhouse: ['oceanvilla'],
     }
 }

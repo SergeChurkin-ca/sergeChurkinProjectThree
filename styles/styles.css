@@ -286,7 +286,7 @@ label {
 }
 
 button {
-  font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(10px + (25 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 label {
@@ -330,7 +330,7 @@ button {
   border: 0;
   padding: 2em 2em;
   border-radius: 0.2em;
-  border: solid 0.2em;
+  border: solid 0.2em #640D36;
 }
 
 .img-stamps {
@@ -482,10 +482,24 @@ li:hover,
 li:focus {
   -webkit-box-shadow: 0.2em 0.2em 0.2em grey;
           box-shadow: 0.2em 0.2em 0.2em grey;
+  border: solid 0.2em;
 }
 
 li:hover,
 li:focus {
   background-color: #137596;
   border: outset 0.2em #137596;
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button:active {
+  display: inline-block;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }

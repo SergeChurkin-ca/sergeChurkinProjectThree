@@ -1,13 +1,23 @@
-button:hover,
-button:focus,
-li:hover,
-li:focus {
-    // background: whitesmoke;
-    box-shadow: 0.2em 0.2em 0.2em grey;
-}
-
-li:hover,
-li:focus {
-    background-color: rgb(19, 117, 150);
-    border: outset 0.2em rgb(19, 117, 150);
-}
+    button:hover,
+    button:focus,
+    li:hover,
+    li:focus {
+        // background: whitesmoke;
+        box-shadow: 0.2em 0.2em 0.2em grey;
+        border: solid 0.2em;
+    }
+    
+    li:hover,
+    li:focus {
+        background-color: rgb(19, 117, 150);
+        border: outset 0.2em rgb(19, 117, 150);
+        transform: scale(1.025);
+        transition: all 0.3s;
+    }
+    
+    button:active {
+        display: inline-block;
+        transform: scale(0.9);
+        font-weight: bold;
+        transition: all 0.5s;
+    }
