@@ -147,7 +147,7 @@ const serchForAnswer = function(arr) {
                 <img src="https://source.unsplash.com/450x750/?${countryName},nature" alt="">
             </div>
            
-            <a href="quiz.html" id="reset"><button type="submit">Reset</button></a>
+            <a href="quiz.html" id="reset"><button type="submit">Start over</button></a>
             </div>
 
                 `);

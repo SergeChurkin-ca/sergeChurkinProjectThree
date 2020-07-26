@@ -14,6 +14,7 @@
  
  .question-wrapper {
      display: inline-flex;
+     flex-wrap: wrap;
      // justify-content: space-evenly;
      justify-content: center;
      width: 100%;
@@ -25,6 +26,7 @@
  ul {
      padding: 0.5em;
      width: calc((100% / 2));
+     flex: 1 0 300px
  }
  
  li {
@@ -34,6 +36,7 @@
      margin: 0 1em;
      margin: 1em;
      padding: 1em;
+     line-height: 2em;
  }
  
  label {
@@ -51,15 +54,23 @@
  .img-container {
      // height: auto;
      // width: 50%;
-     margin: 0 auto;
+     margin: 0.5em auto;
      overflow: hidden;
      width: 50%;
+     flex: 1 1 300px;
  }
  
  img {
      width: 100%;
      height: auto;
      padding: 2em 2em;
+ }
+ 
+ button {
+     background-color: lightgray;
+     width: calc((100% / 2) - 1em);
+     padding: 0 1em;
+     margin: 1em 1em;
  }
  
  .button-next button {
@@ -73,12 +84,26 @@
      width: 80%;
      align-items: center;
      text-align: center;
+     margin: 2em auto;
  }
  
  .answer-img-container {
      display: inline-flex;
+     flex-wrap: wrap;
  }
  
- button {
-     width: calc((100% / 2) - 2em);
+ .answer-img-container img {
+     flex: 1 0 200px;
+ }
+ 
+ @media(max-width: 380px) {
+     .wrapper {
+         width: 100%;
+         margin: 0 auto;
+         padding: 0;
+     }
+     .form-button {
+         width: 100%;
+         margin: 0.4em auto;
+     }
  }

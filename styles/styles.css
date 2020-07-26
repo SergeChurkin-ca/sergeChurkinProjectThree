@@ -364,6 +364,8 @@ h2 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -375,6 +377,9 @@ h2 {
 ul {
   padding: 0.5em;
   width: calc((100% / 2));
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
 }
 
 li {
@@ -383,6 +388,7 @@ li {
   margin: 0 1em;
   margin: 1em;
   padding: 1em;
+  line-height: 2em;
 }
 
 label {
@@ -398,15 +404,25 @@ input[type='checkbox'] {
 }
 
 .img-container {
-  margin: 0 auto;
+  margin: 0.5em auto;
   overflow: hidden;
   width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
 }
 
 img {
   width: 100%;
   height: auto;
   padding: 2em 2em;
+}
+
+button {
+  background-color: lightgray;
+  width: calc((100% / 2) - 1em);
+  padding: 0 1em;
+  margin: 1em 1em;
 }
 
 .button-next button {
@@ -421,14 +437,31 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin: 2em auto;
 }
 
 .answer-img-container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-button {
-  width: calc((100% / 2) - 2em);
+.answer-img-container img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+}
+
+@media (max-width: 380px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .form-button {
+    width: 100%;
+    margin: 0.4em auto;
+  }
 }
