@@ -137,7 +137,20 @@ const serchForAnswer = function(arr) {
                 app.countries[countryName].score++;
 
                 console.log(`${countryName}: ${app.countries[countryName].score}`);
-                $('.result').text(`${countryName} fits your personality best!`);
+
+                $('body').html(`
+                <div class="wrapper answer-wrapper">
+                <h2>Perhaps you were supposed to be born in ${countryName}</h2>
+                <div class="answer-img-container">
+                <img src="https://source.unsplash.com/450x750/?${countryName},flag" alt="">
+                <img src="https://source.unsplash.com/450x750/?${countryName},people" alt="">
+                <img src="https://source.unsplash.com/450x750/?${countryName},nature" alt="">
+            </div>
+           
+            <a href="quiz.html" id="reset"><button type="submit">Reset</button></a>
+            </div>
+
+                `);
 
 
 
