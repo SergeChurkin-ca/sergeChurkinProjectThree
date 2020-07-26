@@ -1,0 +1,27 @@
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 99%;
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 50% 0;
+    background: url('/assets/erik-mclean-f7wX87Zs4fU-unsplash.jpg');
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.text-container {
+    position: fixed;
+    top: 50%;
+    text-align: center;
+}
+
+button {
+    color: black;
+    height: 2em;
+}

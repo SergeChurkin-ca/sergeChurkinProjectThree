@@ -4,7 +4,6 @@
 const app = {};
 
 
-
 // building database
 app.countries = {
 
@@ -92,12 +91,11 @@ app.countries = {
 }
 
 
-
+// event listner and obtaining values from user choices
 $('button').on('click', function(e) {
 
     e.preventDefault();
     const choice = [];
-
 
     let countryScore = 0;
     $.each($('input:checked'),
@@ -113,8 +111,8 @@ $('button').on('click', function(e) {
                     }
                     // console.log(userChoice);
                     // $('body').html(choice)
-                    // countryScore++;
-                    // console.log("score is " + countryScore)
+                countryScore++;
+                // console.log("score is " + countryScore)
 
                 choice.push(userChoice);
 
@@ -126,6 +124,8 @@ $('button').on('click', function(e) {
     //find the list of countrie
 })
 
+
+// searching for answer adding score to country and desplay the most relevant
 const serchForAnswer = function(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let countryName in app.countries) {
@@ -155,11 +155,6 @@ const serchForAnswer = function(arr) {
 
 // clear input fields and refresh the page
 $('#reset').on('click', function(e) {
-        $("input:checked").prop("checked", false);
-        location.reload();
-    })
-    // }
-
-// $(function() {
-//     app.init();
-// })
+    $("input:checked").prop("checked", false);
+    location.reload();
+})
