@@ -16,6 +16,8 @@ app.countries = {
         landscape: ['seaside', 'mountains', 'lakeside'],
         wayOfLife: ['secluded', 'adventurous'],
         dreamhouse: ['woodloghouse'],
+        sundaymorning: ['home', 'parents'],
+        people: ['talkative', 'fancy']
     },
     Germany: {
         score: 0,
@@ -26,16 +28,21 @@ app.countries = {
         landscape: ['forest', 'lakeside', 'cityscape'],
         wayOfLife: ['citylife', 'rural', 'journeys', 'hardworking'],
         dreamhouse: ['cityappartment', 'farmhouse'],
+        sundaymorning: ['temple', 'hospital'],
+        people: ['slow', 'uncultured']
+
     },
     Thailand: {
         score: 0,
         season: ['summer'],
         weather: ['sunny', 'hot', 'thunder', 'rainy', 'hot'],
-        food: ['thai', 'seafood'],
+        food: ['asian', 'seafood'],
         spicy: ['suicide'],
         landscape: ['mountains', 'seaside', 'jungle'],
         wayOfLife: ['rural', 'island'],
         dreamhouse: ['oceanvilla', 'junglehut'],
+        sundaymorning: ['beach', 'police'],
+        people: ['silent']
     },
     France: {
         score: 0,
@@ -46,6 +53,8 @@ app.countries = {
         landscape: ['mountains', 'seaside'],
         wayOfLife: ['citylife'],
         dreamhouse: ['townhouse', 'cityappartment'],
+        sundaymorning: ['airport', 'parents'],
+        people: ['polite']
     },
     Panama: {
         score: 0,
@@ -56,6 +65,9 @@ app.countries = {
         landscape: ['seaside'],
         wayOfLife: ['journey', 'adventurous'],
         dreamhouse: ['condominium'],
+        sundaymorning: ['beach', 'parents'],
+        people: ['polite', 'silent']
+
 
     },
     Canada: {
@@ -67,16 +79,20 @@ app.countries = {
         landscape: ['forest', 'tundra', 'lakeside'],
         wayOfLife: ['rural', 'journeys', 'secluded'],
         dreamhouse: ['townhouse', 'farmhouse'],
+        sundaymorning: ['woods', 'home'],
+        people: ['fancy', 'rude']
     },
     England: {
         score: 0,
         season: ['fall', 'spring'],
-        weather: ['stormy', 'rainy', 'foggy', 'cloudy', 'windy'],
+        weather: ['rainy', 'foggy', 'cloudy', 'windy'],
         food: ['oatmeal'],
         spicy: ['none'],
-        landscape: ['forest', 'cityscape'],
+        landscape: ['cityscape'],
         wayOfLife: ['citylife'],
         dreamhouse: ['townhouse', 'estate', 'cityappartment'],
+        sundaymorning: ['parents', 'home'],
+        people: ['uncultured', 'rude']
     },
     Tunisia: {
         score: 0,
@@ -87,6 +103,20 @@ app.countries = {
         landscape: ['desert', 'seaside'],
         wayOfLife: ['adventurous', 'journeys'],
         dreamhouse: ['oceanvilla'],
+        sundaymorning: ['airport', 'beach'],
+        people: ['slow', 'silent']
+    },
+    Russia: {
+        score: 0,
+        season: ['winter'],
+        weather: ['snowy'],
+        food: ['meats'],
+        spicy: ['none'],
+        landscape: ['forest', 'cityscape'],
+        wayOfLife: ['adventurous'],
+        dreamhouse: ['woodloghouse'],
+        sundaymorning: ['temple', 'police'],
+        people: ['talkative']
     }
 }
 
@@ -102,26 +132,17 @@ $('#submit').on('click', function(e) {
             function() {
                 console.log(choice)
 
-                // console.log($(this).attr('name'));
-                // choice.push($(this).val());
                 const userChoice = {
-                        category: $(this).attr('name'),
-                        selection: $(this).val(),
+                    category: $(this).attr('name'),
+                    selection: $(this).val(),
 
-                    }
-                    // console.log(userChoice);
-                    // $('body').html(choice)
+                }
                 countryScore++;
-                // console.log("score is " + countryScore)
-
                 choice.push(userChoice);
-
             })
         // this is the selection after checkbox checked
-
     serchForAnswer(choice);
 
-    //find the list of countrie
 })
 
 
@@ -129,11 +150,9 @@ $('#submit').on('click', function(e) {
 const serchForAnswer = function(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let countryName in app.countries) {
-            // console.log(app.countries[countryName][arr[i].category]);
-            // console.log("looking for category" + arr[i])
+
             if (app.countries[countryName][arr[i].category].includes(arr[i].selection)) {
-                // console.log(countryName)
-                // $('body').append(countryName);
+
                 app.countries[countryName].score++;
 
                 console.log(`${countryName}: ${app.countries[countryName].score}`);
@@ -142,25 +161,16 @@ const serchForAnswer = function(arr) {
                 <div class="wrapper answer-wrapper">
                 <h2>Perhaps you were supposed to be born in ${countryName}</h2>
                 <div class="answer-img-container">
-                <img src="https://source.unsplash.com/450x750/?${countryName},flag" alt="">
-                <img src="https://source.unsplash.com/450x750/?${countryName},people" alt="">
-                <img src="https://source.unsplash.com/450x750/?${countryName},nature" alt="">
+                <img src="https://source.unsplash.com/450x750/?${countryName},landmark" alt="Random placeholder image of landmark in ${countryName}">
+                <img src="https://source.unsplash.com/450x750/?${countryName},people" alt="People of ${countryName}">
+                <img src="https://source.unsplash.com/450x750/?${countryName},nature" alt="Nature of ${countryName}">
             </div>
            
             <a href="quiz.html" id="reset"><button type="submit">Start over</button></a>
             </div>
 
                 `);
-
-
-
-                // console.log("Maximum score is " + Math.max(app.countries[countryName].score));
-
-                // $('.result').text(`${countryName} ${ Math.max(app.countries[countryName].score)}`);
-                // $('.result').text(`${ Math.max(app.countries[countryName].score)}`);
-                // $('.result').text(`${Math.max(app.countries[countryName].score)}`);
             }
-
         }
     }
 }
