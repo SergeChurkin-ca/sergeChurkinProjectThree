@@ -346,6 +346,10 @@ button {
   z-index: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .content-wrapper {
   width: 70%;
   text-align: left;
@@ -504,4 +508,38 @@ button:active {
   font-weight: bold;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+@media (max-width: 380px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .form-button {
+    width: 100%;
+    margin: 0.4em auto;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: grey;
+  padding: 0.2em;
+}
+
+footer .social li {
+  display: inline;
+  background-color: grey;
+  border: 0;
+}
+
+footer ul {
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
