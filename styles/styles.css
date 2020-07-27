@@ -277,6 +277,7 @@ body {
 
 h1 {
   font-size: calc(20px + (86 - 10) * ((100vw - 300px) / (1600 - 300)));
+  color: #c25252;
 }
 
 h2,
@@ -300,7 +301,6 @@ label {
 
 .welcome-container {
   text-align: center;
-  background: url("/assets/erik-mclean-f7wX87Zs4fU-unsplash.jpg");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
