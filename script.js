@@ -147,6 +147,9 @@ $('#submit').on('click', function(e) {
 
 
 // searching for answer adding score to country and desplay the most relevant
+// displaying resul dynamically
+
+
 const serchForAnswer = function(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let countryName in app.countries) {
@@ -168,7 +171,18 @@ const serchForAnswer = function(arr) {
            
             <a href="quiz.html" id="reset"><button type="submit">Start over</button></a>
             </div>
-
+            <footer>
+            <ul class="social">
+    
+                <li><a class="tw-ic mr-3 " role="button " href="https://twitter.com/ChurkinSerge" target="_blank"><i class="fab fa-lg fa-twitter "></i></a></li>
+                <li><a class="li-ic mr-3 " role="button " href="https://www.linkedin.com/in/sergechurkin/" target="_blank"><i class="fab fa-lg fa-linkedin-in " ></i></a></li>
+                <li><a class="git-ic mr-3 " role="button " href="https://github.com/SergeChurkin-ca" target="_blank"><i class="fab fa-lg fa-github " href="https://github.com/SergeChurkin-ca" target="_blank"></i></a></li>
+    
+            </ul>
+            <p class="trademark ">
+                2020 &copy serge-web created at Juno College of Technology
+            </p>
+        </footer>
                 `);
             }
         }
